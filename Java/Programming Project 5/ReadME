@@ -1,0 +1,16 @@
+Programming Project 5
+Due April 12 at 11:59PM
+Remember you cannot use late hour on this one! It must be submitted on time!
+
+PROGRAMMING (70 points)
+Scrabble Help: The file dictionary.txt contains all of the words in the Official Scrabble Player’s Dictionary, Second Edition. There are more recent editions, but I’m afraid they are copyright protected and I do not have permission to use them here. Note: this list contains some offensive language. Write a class, WordLists, in Java that generates useful word lists for scrabble players using this list.
+
+Your class should contain the following methods:
+
+WordLists(String fileName): a constructor that takes the name of the dictionary file as the only parameter.
+lengthN(int n): returns an ArrayList of all length n words (Strings) in the dictionary file.
+endsWith(char lastLetter, int n): returns an ArrayList of words of length n ending with the letter lastLetter
+containsLetter(char included, int index, int n): returns an ArrayList of words of length n containing the letter included at position index. So for example the word “cannon” would be on the list returned by containsLetter('o’,4,6) because it contains the letter 'o’, at index 4, and is length 6. (Note: The index begins at 0!)
+multiLetter(int m, char included): returns an ArrayList of words with exactly m occurrences of the letter included.
+Use the included template for your WordLists.java file. Write your own test class WordTest.java for your WordLists class that tries these methods out and writes the word lists (the ArrayLists of strings) to text files. Your test class should make a new text file for each of the four methods above. Your program should handle any exceptions that occur by terminating gracefully.
+
