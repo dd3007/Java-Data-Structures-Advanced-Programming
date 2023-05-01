@@ -1,0 +1,33 @@
+Programming Project 3 (70 points)
+Due February 27, 11:59PM
+Consider the following game between two players: Both players simultaneously declare “one” or "two". Player 1 wins if the sum of the two declared numbers is odd and Player 2 wins if the sum is even. In either case the loser is obliged to pay the winner (in tokens) the sum of the two declared numbers. So Player 1 may have to pay 2 or 4 tokens or may win 3 tokens.
+
+Part 1: Write a computer program in Java that allows a user to play this game against a computer. The computer’s strategy will be as follows. A computer player will have a threshold variable, t. The computer will generate a random number between 0 and 1. If the number is greater than t the computer will declare “two” if the random number is less than t the computer will declare "one". I have included templates for a Game class, a computer ComputerPlayer class and a test class, OddEven on Codio. Note that there is no class for the human player as this can be handled easily enough in the Game class.
+
+Part 2:
+Modify the Game class so that it also allows two computer players to play a game against each other. Do this by overloading the constructor so that when a game is instantiated one may specify whether or not it is interactive or simulated. Since both players are computers in a simulated game each computer player will be a different object with its own threshold (instance) variables t and and its own score (tokens won or lost so far in a session).
+
+Write a separate test class called Simulation that allows you to run some simulations (play many games of computer versus computer) using various combinations of the threshold variable t for each player. A simulated game need not print or return anything but you should add some functionality to the Game class so that you can access the current amount of tokens either player has won or lost so far. Check to see how much each player loses or wins for each combination of thresholds after many games. Is it better to be the odd player? The even player? Does it matter? Better here means that if enough games are played there is a strategy (threshold) that one player can use that guarantees positive average outcome regardless of the other player’s strategy. We call it a fair game if there is no such strategy for either player. By using the computer vs. computer option in your program set up some extended sessions of computer vs. computer to test different combinations of player 1’s t and player 2’s t (Hint: use a nested for loop structure to vary each player’s threshold). Determine if either player has an advantage and if so which player it is and determine a threshold value t* that demonstrates the advantage. I have included a sample test class for this part called SimTest. You should not alter this class and your code must work with it. We will test your code using something similar to this.
+
+Please read Here are some answers to some commonly asked questions about this problem and some tips:
+
+Am I allowed to use different instance variables/move instance variables from one class to another?
+You can add new instance variables if you wish. You should not be moving predefined instance variables from one class to another. In general, please do not change any of the scaffolding.
+
+Do we need to find the optimal thresholds for both the odd and even player?
+Just for the player with an advantage if there is one.
+
+Do we need to print out the average winnings?
+This falls under the “Je ne sais quoi” category of grading (see below).
+
+Can I assume valid user input?
+Yes.
+
+Should the user be able to pick whether they are P1 or P2 in the interactive game?
+This falls under the “Je ne sais quoi” category of grading (see below).
+
+For Part 1, should I be able to play more than 1 round?
+Yes.
+
+Are tokens/scores cumulative across rounds for part 1 and part 2?
+Yes.
